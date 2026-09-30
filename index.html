@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Tracking System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h2>🎓 Student Tracking System</h2></header>
+
+<main>
+<section id="welcome" class="page">
+  <div class="hero">
+    <h1>Welcome to Student Tracking System</h1>
+    <p>Student, Parent and Teacher portal</p>
+    <button onclick="show('roles')">Get Started</button>
+  </div>
+</section>
+
+<section id="roles" class="page hidden">
+  <div class="box">
+    <h2>Select Login</h2>
+    <button onclick="selectRole('Student')">👨‍🎓 Student Login</button>
+    <button onclick="selectRole('Parent')">👨‍👩‍👧 Parent Login</button>
+    <button onclick="selectRole('Teacher')">👩‍🏫 Teacher Login</button>
+  </div>
+</section>
+
+<section id="login" class="page hidden">
+  <div class="box">
+    <h2 id="loginTitle">Login</h2>
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+    <p class="hint">Demo password: <b>1234</b></p>
+    <button class="back" onclick="show('roles')">Back</button>
+  </div>
+</section>
+
+<section id="dashboard" class="dashboard hidden">
+  <h1 id="dashTitle"></h1>
+  <div id="content" class="cards"></div>
+  <button class="logout" onclick="logout()">Logout</button>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
